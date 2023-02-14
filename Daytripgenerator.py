@@ -14,7 +14,9 @@
 
 #  and/or form of entertainment if I don’t like one or more of those thing
 
+
 import random
+print("welcome to trip generator here are some options we have today")
 
 destination= ['california','texas','london','china']
 restaurant= ['nobu','steakhouse','sketch','mott']
@@ -26,7 +28,6 @@ entertainment = ['moviehouse','concert','skatingring','arcade']
 def run_trip_generator(list_of_plans):
     selected_plans= random.choice(list_of_plans)
     return selected_plans
-
 destinations=run_trip_generator(destination)
 print("destionation:",destinations)
 restaurants=run_trip_generator(restaurant)
@@ -36,4 +37,29 @@ print('transportation:',transportations)
 entertainments=run_trip_generator(entertainment)
 print('entertainments:',entertainments)
 
-def 
+
+
+def determine_satisfaction():
+    run_trip_generator()
+while True:    
+
+    User_reponse= 'yes' 
+    User_reponse2='no'  
+    valid_trip_plans = input('Are you satistfied with this trip? yes or no ')
+        
+    
+    if valid_trip_plans == User_reponse:
+        print("Then have a great trip")
+        break
+    elif valid_trip_plans == User_reponse2:
+        print('lets try another trip choice')
+        destinations=run_trip_generator(destination)
+        print("destionation:",destinations)
+        restaurants=run_trip_generator(restaurant)
+        print("restaurant:",restaurants)
+        transportations=run_trip_generator(transportation)
+        print('transportation:',transportations)
+        entertainments=run_trip_generator(entertainment)
+        print('entertainments:',entertainments)
+    else:
+        break
